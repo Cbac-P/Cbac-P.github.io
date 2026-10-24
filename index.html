@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nguyen Thanh Phuong | Computer Vision Intern</title>
+  <meta name="description" content="Portfolio of Nguyen Thanh Phuong - Third-year AI student seeking a Computer Vision internship.">
+  <style>
+    :root {
+      --olive: #43431c;
+      --gold: #e8b923;
+      --bg: #fafaf5;
+      --text: #222;
+      --muted: #666;
+      --card: #ffffff;
+      --line: #e3e3d6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--olive); }
+    .container { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { background: var(--olive); color: #fff; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+    .nav .logo { font-weight: 700; letter-spacing: 2px; }
+    .nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav a { color: #fff; text-decoration: none; font-size: 0.95rem; }
+    .nav a:hover { color: var(--gold); }
+
+    .hero { display: flex; align-items: center; gap: 32px; padding: 40px 0 56px; }
+    .avatar {
+      width: 150px; height: 150px; border-radius: 50%;
+      border: 5px solid var(--gold); object-fit: cover;
+      background: var(--gold); flex-shrink: 0;
+    }
+    .hero h1 { font-size: 2.6rem; letter-spacing: 3px; }
+    .hero p.role { color: var(--gold); font-weight: 600; letter-spacing: 1px; margin: 4px 0 12px; }
+    .hero p.sub { max-width: 560px; opacity: 0.92; }
+    .btn {
+      display: inline-block; margin-top: 18px; padding: 10px 22px;
+      background: var(--gold); color: var(--olive); font-weight: 700;
+      border-radius: 6px; text-decoration: none;
+    }
+    .btn:hover { filter: brightness(1.08); }
+
+    /* Sections */
+    section { padding: 48px 0 8px; }
+    h2 {
+      font-size: 1.5rem; color: var(--olive);
+      border-bottom: 3px solid var(--gold);
+      display: inline-block; margin-bottom: 22px; padding-bottom: 4px;
+    }
+
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 10px; padding: 22px 24px; margin-bottom: 20px;
+    }
+    .card h3 { font-size: 1.1rem; color: var(--olive); }
+    .meta { color: var(--muted); font-size: 0.92rem; font-style: italic; margin: 2px 0 10px; }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 6px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+    .tag {
+      background: #f1efd0; color: var(--olive); font-size: 0.82rem;
+      padding: 3px 10px; border-radius: 999px; font-weight: 600;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .grid .card { margin-bottom: 0; }
+
+    .contact-list { list-style: none; }
+    .contact-list li { margin-bottom: 6px; }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 40px 0 30px; }
+
+    @media (max-width: 640px) {
+      .hero { flex-direction: column; text-align: center; padding-top: 24px; }
+      .hero h1 { font-size: 2rem; }
+      .nav { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">Nguyen Thanh Phuong</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <!-- Đặt ảnh của bạn tên photo.jpg cùng thư mục với index.html -->
+        <img class="avatar" src="photo.jpg" alt="Portrait of Nguyen Thanh Phuong" onerror="this.style.visibility='hidden'">
+        <div>
+          <h1>Nguyen Thanh Phuong</h1>
+          <p class="role">COMPUTER VISION INTERN</p>
+          <p class="sub">Third-year Artificial Intelligence student building practical, real-world AI projects.</p>
+          <a class="btn" href="#projects">View my projects</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="about">
+      <h2>Professional Summary</h2>
+      <div class="card">
+        <p>
+          Third-year Artificial Intelligence student. Winner of the First Prize at the regional round of a
+          competition organized by CYTAST, achieved by developing a practical project utilizing Google's
+          landmark model architecture. Seeking a Computer Vision internship to contribute to the
+          development of real-world AI solutions.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Project Experience</h2>
+
+      <article class="card">
+        <h3>Real-time Driver Drowsiness Detection System</h3>
+        <p class="meta">First Prize, Regional Round (Southern Region), National Youth Innovation Competition 2026 – Category C (AI)</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">OpenCV</span>
+          <span class="tag">MediaPipe</span><span class="tag">Tkinter</span>
+          <span class="tag">Orange Pi 5</span>
+        </div>
+        <ul>
+          <li>Developed a real-time driver drowsiness detection desktop app using Tkinter and MediaPipe Face Landmarker (478.2 landmarks).</li>
+          <li>Improved system stability under harsh real-world conditions by incorporating automated lighting compensation (Gamma + CLAHE), glare mitigation, sunglasses detection for EAR error prevention, signal smoothing, and motion blur filtering.</li>
+          <li>Engineered and deployed an offline Linux-based iteration optimized for Orange Pi 5 hardware, enabling standalone edge computing without internet connectivity.</li>
+        </ul>
+        <!-- <p><a href="https://github.com/Cbac-P?tab=repositories">View on GitHub →</a></p> -->
+      </article>
+
+      <article class="card">
+        <h3>Rice Leaf Disease Classification Model Design Challenge</h3>
+        <p class="meta">Constraint: Only Machine Learning algorithms/techniques learned in the course of the same name may be used.</p>
+        <div class="tags">
+          <span class="tag">Scikit-Learn</span><span class="tag">Pandas</span>
+          <span class="tag">NumPy</span><span class="tag">SMOTE</span>
+        </div>
+        <ul>
+          <li>Model optimization using traditional method constraints: developed a voting ensemble system integrating four base models, achieving an F1-macro score of 77.09% (outperforming the lower-tier range of deep learning solutions by 0.6–0.93).</li>
+          <li>Addressing data imbalance: identified an 18% skew across classes; applied the SMOTE technique to rebalance the dataset and adopted the F1-macro score—rather than accuracy—as the primary evaluation metric.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Technical Organizing Committee Collaborator</h3>
+        <p class="meta">Autonomous Vehicle Competition for High School Students (FANROC), co-organized by FPT University | 2024</p>
+        <ul>
+          <li>Collaborated effectively with the technical team members to guide contestants in getting familiar with the assigned equipment kit.</li>
+          <li>Contributed to ensuring the event stayed on schedule throughout the competition.</li>
+          <li>Self-studied lane detection algorithms and techniques used in autonomous vehicles.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Frameworks</h3>
+          <div class="tags">
+            <span class="tag">PyTorch / TensorFlow</span><span class="tag">OpenCV</span>
+            <span class="tag">MediaPipe</span><span class="tag">Scikit-Learn</span>
+            <span class="tag">Pandas</span><span class="tag">NumPy</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span class="tag">Git</span><span class="tag">Docker</span>
+            <span class="tag">Orange Pi / Raspberry Pi</span><span class="tag">Linux</span>
+            <span class="tag">Tkinter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education &amp; Certificates</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>3rd-year Student | FPT University</h3>
+          <ul>
+            <li>Member of the CVAR Lab</li>
+            <li>Member of the F-AI Club</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Certificates</h3>
+          <ul>
+            <li>IBM Data Science</li>
+            <li>Software Development Lifecycle</li>
+            <li>Ethics in the Age of AI</li>
+            <li>Academic Skills for University Success</li>
+            <li>AI Foundations for Everyone</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:phuongntce200567@gmail.com">phuongntce200567@gmail.com</a></li>
+          <li><strong>Phone:</strong> +84332686194</li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/Cbac-P" target="_blank" rel="noopener">github.com/Cbac-P</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/phuong-nguyen-5b8760392/" target="_blank" rel="noopener">linkedin.com/in/phuong-nguyen-5b8760392</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2026 Nguyen Thanh Phuong. Built with HTML &amp; CSS.</footer>
+
+</body>
+</html>
